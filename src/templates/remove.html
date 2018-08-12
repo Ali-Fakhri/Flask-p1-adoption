@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>HOME | Adoption Site Tutorial</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Underdog" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"
+</head>
+
+<body>
+    {% extends 'base.html' %}
+    {% block content %}
+    <div class="jumbotron">
+        <h1 class="text-center">Welcome, Do You Have a Puppy to Adopt?</h1>
+    </div>
+        <form method='POST' class="mt-5">
+            {{ form.hidden_tag() }}
+            <div class="form-group text-center">
+                {{ form.id.label(class="font-weight-bold") }}
+                {{ form.id(class="form-control mt-2 d-block w-50 mx-auto") }}
+                {{ form.submit_removing(class="d-block w-25 p-2 mt-2 mx-auto") }}
+            </div>
+        </form>
+    {% endblock %}
+    {% block footer %}
+    {% endblock %}
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{{ url_for('static', filename='jQuery-3.2.1.js') }}"></script>
+    <script src="{{ url_for('static', filename='popper.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+</body>
+
+</html>

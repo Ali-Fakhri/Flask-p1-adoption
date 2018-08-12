@@ -1,0 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Underdog', cursive;
+}
+
+body {
+    background-color: gainsboro;
+}

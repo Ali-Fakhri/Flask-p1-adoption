@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>HOME | Adoption Site Tutorial</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Underdog" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"
+</head>
+
+<body>
+    {% extends 'base.html' %}
+    {% block content %}
+        <div class="container">
+            <div class="row">
+                <div class="col text-center text-weight-bold p-2">
+                    <h1>Welcome to Adoption Web Site Small Tutorial</h1>
+                    <h5>it's Simple You Can Add or Remove and List Puppies in our Database</h5>
+                    <img src="{{ url_for('static', filename='img/puppy.jpg') }}" alt="Puppy Picture" title="isn't Cute ?" style="max-height: 200px;" class="rounded-circle" />
+                    <div class="list-group mt-2">
+                        <a href="{{ url_for('add') }}" class="list-group-item list-group-item-action list-group-item-success py-2">When You Add That's Mean You Get us a Puppy</a>
+                        <a href="{{ url_for('remove') }}" class="list-group-item list-group-item-action list-group-item-danger py-2">When You Remove That's Mean You Get You're Self a Puppy</a>
+                        <a href="{{ url_for('list') }}" class="list-group-item list-group-item-action list-group-item-primary py-2">List All Puppies</a>
+                        <a href="{{ url_for('owner') }}" class="list-group-item list-group-item-action list-group-item-warning py-2">Gift You Friend With a Puppy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+    {% block footer %}
+    {% endblock %}
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{{ url_for('static', filename='jQuery-3.2.1.js') }}"></script>
+    <script src="{{ url_for('static', filename='popper.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+</body>
+
+</html>
